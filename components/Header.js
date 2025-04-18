@@ -1,15 +1,58 @@
+"use client";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "../styles/Home.module.css";
+import { faCog, faCartShopping, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 
 export default function Header() {
-    return (
-      <header className="header">
-        <h1>ShopTrend</h1>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/categories">Categories</a></li>
-            <li><a href="/cart">Cart</a></li>
-          </ul>
-        </nav>
-      </header>
-    );
-  }
+
+  return (
+    <>
+      <>
+      <header className={styles.header}>
+      <div className={styles.blackSection}>
+      <span className={styles.leftIcon}>
+          <FontAwesomeIcon icon={faCog} /> Lorem ipsum dolor
+        </span>
+        <span className={styles.centerText}>  <FontAwesomeIcon icon={faCog} /> Lorem ipsum dolor</span>
+        <span className={styles.rightIcon}>
+          <FontAwesomeIcon icon={faCog} /> Lorem ipsum dolor
+        </span>
+      </div>
+      <div className={styles.container}>
+
+        <div className={styles.logo}>
+          <span className={styles.icon}>⚙️</span>
+        </div>
+
+        <div className={styles.middleContainer}>
+          <div className={styles.logoText}>
+            <h1>LOGO</h1>
+          </div>
+        </div>
+
+        <div className={styles.icons}>
+            <span className={styles.icon}><FontAwesomeIcon icon={faSearch} /></span>
+            <span className={styles.icon}><FontAwesomeIcon icon={faHeart} /></span>
+            <span className={styles.icon}><FontAwesomeIcon icon={faCartShopping} /></span>
+            <span className={styles.icon}><FontAwesomeIcon icon={faUser} /></span>
+            <select className={styles.languageSelect}>
+              <option>ENG</option>
+            </select>
+          </div>
+
+      </div>
+      <nav className={styles.nav}>
+        <a href="/shop">SHOP</a>
+        <a href="/skills">SKILLS</a>
+        <a href="/stories">STORIES</a>
+        <a href="/about">ABOUT</a>
+        <a href="/contact">CONTACT US</a>
+      </nav>
+    </header>
+
+      </>
+    </>
+  );
+}

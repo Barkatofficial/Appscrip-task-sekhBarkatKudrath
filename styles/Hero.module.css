@@ -1,0 +1,25 @@
+.hero {
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #fff;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+    max-width: 600px;
+    line-height: 1.5;
+  }

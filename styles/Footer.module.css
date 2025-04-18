@@ -1,0 +1,94 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 15px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .topSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .leftColumn, .rightColumn {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .leftColumn h3, .rightColumn h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .leftColumn p, .rightColumn p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .emailInput {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    border: none;
+    background-color: #fff;
+  }
+  
+  .subscribeButton {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .subscribeButton:hover {
+    background-color: #555;
+  }
+  
+  .bottomSection {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .column p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .column p:hover {
+    color: #ccc;
+  }
+  
+  .paymentIcons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .paymentIcons span {
+    font-size: 24px;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #ccc;
+  }

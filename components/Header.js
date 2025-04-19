@@ -44,11 +44,11 @@ export default function Header() {
 
       </div>
       <nav className={styles.nav}>
-        <a href="/shop">SHOP</a>
-        <a href="/skills">SKILLS</a>
-        <a href="/stories">STORIES</a>
-        <a href="/about">ABOUT</a>
-        <a href="/contact">CONTACT US</a>
+        <a href="">SHOP</a>
+        <a href="">SKILLS</a>
+        <a href="">STORIES</a>
+        <a href="">ABOUT</a>
+        <a href="">CONTACT US</a>
       </nav>
     </header>
 

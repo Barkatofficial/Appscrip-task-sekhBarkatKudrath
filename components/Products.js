@@ -31,7 +31,7 @@ export default function Products() {
     rawMaterials: false,
     pattern: false,
   });
-  const [isFilterVisible, setIsFilterVisible] = useState(true);
+  const [isFilterVisible, setIsFilterVisible] = useState(false);
 
   const [sortOption, setSortOption] = useState("recommended");
 

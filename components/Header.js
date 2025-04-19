@@ -1,27 +1,32 @@
 "use client";
 
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../styles/Home.module.css";
 import { faCog, faCartShopping, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 
 export default function Header() {
+  const [isNavActive, setIsNavActive] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavActive(!isNavActive);
+  };
 
   return (
-    <>
-      <>
-      <header className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.blackSection}>
-      <span className={styles.leftIcon}>
+        <span className={styles.leftIcon}>
           <FontAwesomeIcon icon={faCog} /> Lorem ipsum dolor
         </span>
-        <span className={styles.centerText}>  <FontAwesomeIcon icon={faCog} /> Lorem ipsum dolor</span>
+        <span className={styles.centerText}>
+          <FontAwesomeIcon icon={faCog} /> Lorem ipsum dolor
+        </span>
         <span className={styles.rightIcon}>
           <FontAwesomeIcon icon={faCog} /> Lorem ipsum dolor
         </span>
       </div>
       <div className={styles.container}>
-
         <div className={styles.logo}>
           <span className={styles.icon}>⚙️</span>
         </div>
@@ -33,17 +38,28 @@ export default function Header() {
         </div>
 
         <div className={styles.icons}>
-            <span className={styles.icon}><FontAwesomeIcon icon={faSearch} /></span>
-            <span className={styles.icon}><FontAwesomeIcon icon={faHeart} /></span>
-            <span className={styles.icon}><FontAwesomeIcon icon={faCartShopping} /></span>
-            <span className={styles.icon}><FontAwesomeIcon icon={faUser} /></span>
-            <select className={styles.languageSelect}>
-              <option>ENG</option>
-            </select>
-          </div>
-
+          <span className={styles.icon}>
+            <FontAwesomeIcon icon={faSearch} />
+          </span>
+          <span className={styles.icon}>
+            <FontAwesomeIcon icon={faHeart} />
+          </span>
+          <span className={styles.icon}>
+            <FontAwesomeIcon icon={faCartShopping} />
+          </span>
+          <span className={styles.icon}>
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <select className={styles.languageSelect}>
+            <option>ENG</option>
+          </select>
+          {/* Hamburger menu button */}
+          <button className={styles.hamburger} onClick={toggleNav}>
+            ☰
+          </button>
+        </div>
       </div>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} ${isNavActive ? styles.active : ""}`}>
         <a href="">SHOP</a>
         <a href="">SKILLS</a>
         <a href="">STORIES</a>
@@ -51,8 +67,5 @@ export default function Header() {
         <a href="">CONTACT US</a>
       </nav>
     </header>
-
-      </>
-    </>
   );
 }

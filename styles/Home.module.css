@@ -97,3 +97,124 @@
 .header {
   border-bottom: 1px solid black; /* Border at the bottom of the header */
 }
+
+
+/* Existing CSS remains unchanged, add these media queries at the bottom */
+
+/* Tablet and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .blackSection {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logoText h1 {
+    font-size: 20px;
+    padding-left: 0; /* Remove left padding to center the logo */
+  }
+
+  .middleContainer {
+    justify-content: center;
+  }
+
+  .icons {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .languageSelect {
+    font-size: 12px;
+  }
+
+  .nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .blackSection {
+    display: none; /* Optionally hide the black section on small screens */
+  }
+
+  .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .logoText h1 {
+    font-size: 18px;
+  }
+
+  .icons {
+    gap: 10px;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
+
+  .languageSelect {
+    padding: 3px;
+    font-size: 10px;
+  }
+
+  /* Hide navigation links and show hamburger menu */
+  .nav {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #000;
+  }
+
+  .nav.active {
+    display: flex; /* Show when active (toggled by hamburger) */
+  }
+
+  .nav a {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  /* Hamburger menu styling */
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #000;
+  }
+}
+
+/* Ensure hamburger is hidden on larger screens */
+@media (min-width: 481px) {
+  .hamburger {
+    display: none;
+  }
+}
